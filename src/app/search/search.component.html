@@ -1,0 +1,15 @@
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-5">
+             <input placeholder="source" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+        </div>
+        <div class="col-sm-5">
+             <input placeholder="destination" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search_dest [formControl]="search_destination">
+        </div>
+        <div class="col-sm-2">
+              <form (ngSubmit)="onSubmit()" #searchform="ngForm">
+                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+             </form>
+        </div>
+      </div>
+</div>

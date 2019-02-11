@@ -1,0 +1,45 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<app-nav></app-nav>
+
+
+<app-search></app-search>
+
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-direction [origin]="origin" [destination]="destination">
+  </agm-direction>
+
+<!--   <agm-marker 
+      *ngFor="let m of markers; let i = index"
+      (markerClick)="clickedMarker(m.label, i)"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      (dragEnd)="markerDragEnd(m, $event)">
+      
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+    
+  </agm-marker> -->
+
+<!--     <agm-marker 
+      [latitude]="location?.lat"
+      [longitude]="location?.lng">   
+  </agm-marker> -->
+
+
+  <agm-circle [latitude]="lat" [longitude]="lng" 
+      [radius]="500"
+      [fillColor]="'red'"
+      [editable]="true">
+  </agm-circle>
+
+</agm-map>
+
+<app-information-table></app-information-table>
+
+
+
